@@ -16,6 +16,8 @@ namespace Mono.Cecil {
 
 	public abstract class TypeSystem {
 
+		public static string CustomCoreLibName;
+
 		sealed class CoreTypeSystem : TypeSystem {
 
 			public CoreTypeSystem (ModuleDefinition module)
@@ -325,7 +327,8 @@ namespace Mono.Cecil {
 			return name == mscorlib
 				|| name == system_runtime
 				|| name == system_private_corelib
-				|| name == netstandard;
+				|| name == netstandard
+				|| (TypeSystem.CustomCoreLibName != null && name == TypeSystem.CustomCoreLibName);
 		}
 	}
 }

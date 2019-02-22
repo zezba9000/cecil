@@ -1,3 +1,6 @@
+# CustomCoreLibHack
+* Look at: Mono.Cecil.TypeSystem.CustomCoreLibName
+
 Cecil
 =====
 
